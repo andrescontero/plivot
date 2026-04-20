@@ -1,4 +1,4 @@
-// ⚠️ IMPORTANTE: Cambia este número por el tuyo (con código de país, sin + ni espacios)
+// js para usar whatsapp 
 var NUMERO_WHATSAPP = '5573772546';
 
 function abrirWhatsApp() {

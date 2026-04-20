@@ -1,0 +1,61 @@
+/* ============================================
+   PLIVOT — PALETA DE COLORES
+   Archivo: css/colors.css
+   ============================================ */
+
+:root {
+
+  /* === COLORES PRIMARIOS === */
+  --color-primary:          #0A0F1C;   /* Azul noche profundo — fondo principal */
+  --color-secondary:        #0D1526;   /* Azul marino oscuro — secciones alternas */
+  --color-dark:             #07090F;   /* Negro azulado — footer / overlays */
+
+  /* === ACENTOS === */
+  --color-accent:           #4A9FD4;   /* Azul cian — acento principal (logo, highlights) */
+  --color-accent-bright:    #5BB8F0;   /* Cian brillante — hover states */
+  --color-accent-glow:      rgba(74, 159, 212, 0.25);
+
+  /* === GRADIENTES === */
+  --gradient-hero:          linear-gradient(180deg, rgba(10,15,28,0.55) 0%, rgba(10,15,28,0.88) 100%);
+  --gradient-accent:        linear-gradient(90deg, #4A9FD4 0%, #2D6FA3 100%);
+  --gradient-card:          linear-gradient(145deg, #0D1830 0%, #111E35 100%);
+  --gradient-section:       linear-gradient(180deg, #07090F 0%, #0A0F1C 100%);
+  --gradient-cta:           linear-gradient(135deg, #0D2044 0%, #142850 100%);
+
+  /* === TEXTO === */
+  --color-text-primary:     #EEF2FF;
+  --color-text-secondary:   #8A9EC4;
+  --color-text-muted:       #4A5A7A;
+  --color-text-accent:      #4A9FD4;
+
+  /* === SUPERFICIES / CARDS === */
+  --color-surface:          #0E1627;
+  --color-surface-hover:    #152035;
+  --color-border:           #1A2540;
+  --color-border-accent:    rgba(74, 159, 212, 0.35);
+
+  /* === NAVBAR === */
+  --color-nav-bg:           rgba(8, 12, 22, 0.92);
+  --color-nav-link:         #8A9EC4;
+  --color-nav-link-active:  #EEF2FF;
+  --color-nav-link-hover:   #4A9FD4;
+  --color-nav-brand:        #EEF2FF;
+
+  /* === BOTONES === */
+  --color-btn-primary-bg:        #4A9FD4;
+  --color-btn-primary-hover:     #5BB8F0;
+  --color-btn-primary-text:      #07090F;
+  --color-btn-outline-border:    #4A9FD4;
+  --color-btn-outline-text:      #4A9FD4;
+
+  /* === SOMBRAS === */
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.5);
+  --shadow-md:     0 8px 28px rgba(0,0,0,0.6);
+  --shadow-lg:     0 20px 60px rgba(0,0,0,0.7);
+  --shadow-accent: 0 0 24px rgba(74, 159, 212, 0.4);
+  --shadow-card:   0 4px 30px rgba(0,0,0,0.5);
+
+  /* === OVERLAYS === */
+  --overlay-dark:   rgba(7, 9, 15, 0.75);
+  --overlay-medium: rgba(10, 15, 28, 0.55);
+}

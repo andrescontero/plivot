@@ -1,0 +1,704 @@
+/* ============================================
+   PLIVOT — ESTILOS PRINCIPALES
+   Archivo: css/styles.css
+   ============================================ */
+
+/* === FUENTES — 100% locales, sin dependencias externas === */
+
+/* === RESET & BASE === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #0A0F1C !important;
+  color: #EEF2FF !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar-plivot {
+  background: var(--color-nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 14px 0;
+  transition: background 0.3s ease;
+}
+
+.navbar-plivot .navbar-brand {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-nav-brand) !important;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-plivot .nav-link {
+  color: var(--color-nav-link) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px !important;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.navbar-plivot .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.25s ease;
+}
+
+.navbar-plivot .nav-link:hover,
+.navbar-plivot .nav-link.active {
+  color: var(--color-nav-link-active) !important;
+}
+
+.navbar-plivot .nav-link:hover::after,
+.navbar-plivot .nav-link.active::after {
+  width: 60%;
+}
+
+.navbar-toggler {
+  border-color: var(--color-border-accent, rgba(74,159,212,0.35)) !important;
+}
+.navbar-toggler-icon {
+  filter: invert(1) brightness(1.5);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+#inicio {
+  min-height: 100vh;
+  background:
+    var(--gradient-hero),
+    url('../img/hero-bg.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+/* Slide indicators lado derecho */
+.hero-slide-numbers {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2;
+}
+
+.hero-slide-numbers span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.hero-slide-numbers span.active-num {
+  color: var(--color-accent);
+}
+
+.hero-slide-numbers span.active-num::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--color-accent);
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Subtítulo hero */
+.hero-eyebrow {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.hero-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 18px;
+}
+
+.hero-title .line-light {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  font-size: 0.6em;
+  display: block;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  max-width: 420px;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn-plivot-primary {
+  background: var(--gradient-accent);
+  color: var(--color-btn-primary-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-accent);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-plivot-primary:hover {
+  background: var(--color-accent-bright, #5BB8F0);
+  box-shadow: 0 0 32px rgba(74,159,212,0.55);
+  transform: translateY(-2px);
+  color: #07090F;
+}
+
+.btn-plivot-outline {
+  background: transparent;
+  border: 1px solid var(--color-btn-outline-border);
+  color: var(--color-btn-outline-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-plivot-outline:hover {
+  background: var(--color-btn-outline-hover-bg, rgba(74,159,212,0.12));
+  color: var(--color-accent);
+}
+
+/* ============================================
+   FEATURE CARDS (bajo el hero)
+   ============================================ */
+#servicios {
+  background: var(--color-secondary);
+  padding: 60px 0;
+}
+
+.feature-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 28px 24px 22px;
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--color-border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.feature-card h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.feature-card .card-link {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.feature-card .card-link:hover { gap: 10px; }
+
+/* ============================================
+   TOURS SECTION
+   ============================================ */
+#tours {
+  background: var(--color-primary);
+  padding: 80px 0;
+}
+
+.section-label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.section-title .accent { color: var(--color-accent); }
+
+.section-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+/* Tour cards */
+.tour-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--color-surface);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: brightness(0.75);
+}
+
+.tour-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.6);
+}
+
+.tour-card-body {
+  padding: 14px 16px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.tour-card-body h5 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.tour-card-body p {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================
+   GALERÍA / VIDEO SECTION
+   ============================================ */
+#galeria {
+  background: var(--color-secondary);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#galeria::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../img/gallery-bg.jpg') center / cover no-repeat;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+#galeria .container { position: relative; z-index: 1; }
+
+.gallery-big-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-stretch: condensed;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--color-text-primary);
+}
+
+.gallery-big-title .accent { color: var(--color-accent); }
+
+.video-thumb {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.video-thumb:hover img {
+  filter: brightness(0.5);
+  transform: scale(1.03);
+}
+
+.video-thumb .play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px; height: 56px;
+  background: rgba(74,159,212,0.2);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.video-thumb:hover .play-btn {
+  background: rgba(74,159,212,0.45);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-thumb .play-btn svg { width: 20px; height: 20px; fill: #fff; margin-left: 3px; }
+
+/* Video bar falsa */
+.video-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.video-bar .vb-line {
+  flex: 1;
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.video-bar .vb-line::after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 100%;
+  background: var(--color-accent);
+}
+
+/* ============================================
+   CONTACTO / WHATSAPP FORM
+   ============================================ */
+#contacto {
+  background: var(--gradient-cta);
+  border-top: 1px solid var(--color-border);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#contacto::after {
+  content: '✦';
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+  font-size: 3rem;
+  color: rgba(74,159,212,0.15);
+}
+
+.cta-title {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cta-title .accent { color: var(--color-accent); }
+
+.cta-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+/* Tarjeta del formulario */
+.wa-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.wa-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.wa-card-header span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.wa-card-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+}
+
+/* Campos */
+.wa-field {
+  margin-bottom: 14px;
+}
+
+.wa-field label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.wa-field input,
+.wa-field select,
+.wa-field textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 11px 16px;
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.wa-field input:focus,
+.wa-field select:focus,
+.wa-field textarea:focus {
+  border-color: var(--color-accent);
+  background: rgba(74,159,212,0.05);
+}
+
+.wa-field input::placeholder,
+.wa-field textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.wa-field select option {
+  background: #0D1526;
+  color: var(--color-text-primary);
+}
+
+.wa-field textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  width: 100%;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+  color: #fff;
+}
+
+.wa-note {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+  margin-top: 14px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background: var(--color-dark);
+  border-top: 1px solid var(--color-border);
+  padding: 28px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
+footer a {
+  color: var(--color-text-accent);
+  text-decoration: none;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.divider-accent {
+  width: 48px;
+  height: 3px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+  margin: 14px 0 24px;
+}
+
+.divider-accent.center { margin-left: auto; margin-right: auto; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-slide-numbers { display: none; }
+  .wa-card { padding: 28px 20px; }
+}

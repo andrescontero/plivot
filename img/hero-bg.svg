@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="60%" stop-color="#1A3A5C"/>
+      <stop offset="100%" stop-color="#0D2240"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#4A9FD4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#sky)"/>
+  <rect width="1440" height="900" fill="url(#glow)"/>
+  <!-- Mountain silhouettes -->
+  <path d="M0 700 L200 380 L400 600 L600 300 L800 520 L1000 260 L1200 480 L1440 320 L1440 900 L0 900 Z"
+        fill="#0A1525" opacity="0.9"/>
+  <path d="M0 800 L150 600 L350 700 L550 500 L750 650 L950 420 L1150 600 L1350 450 L1440 520 L1440 900 L0 900 Z"
+        fill="#07101E" opacity="0.95"/>
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="250" cy="40" r="1" fill="white" opacity="0.5"/>
+  <circle cx="450" cy="100" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="700" cy="55" r="1" fill="white" opacity="0.4"/>
+  <circle cx="900" cy="90" r="2" fill="white" opacity="0.6"/>
+  <circle cx="1100" cy="45" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="1300" cy="70" r="1" fill="white" opacity="0.7"/>
+  <circle cx="1400" cy="120" r="1.5" fill="white" opacity="0.4"/>
+  <!-- Atmospheric cloud mist -->
+  <ellipse cx="600" cy="400" rx="400" ry="80" fill="rgba(74,159,212,0.06)"/>
+  <ellipse cx="900" cy="350" rx="300" ry="60" fill="rgba(74,159,212,0.04)"/>
+</svg>

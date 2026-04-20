@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <!-- Átomo / órbitas -->
+  <ellipse cx="24" cy="25" rx="14" ry="7" stroke="#4A9FD4" stroke-width="1.5" fill="none"/>
+  <ellipse cx="24" cy="25" rx="14" ry="7" stroke="#4A9FD4" stroke-width="1.5" fill="none"
+           transform="rotate(60 24 25)"/>
+  <ellipse cx="24" cy="25" rx="14" ry="7" stroke="#4A9FD4" stroke-width="1.5" fill="none"
+           transform="rotate(120 24 25)"/>
+  <circle cx="24" cy="25" r="3" fill="#4A9FD4"/>
+  <!-- Punto de órbita -->
+  <circle cx="37.5" cy="21" r="2" fill="#4A9FD4"/>
+  <!-- Texto PLIVOT -->
+  <text x="46" y="30" font-family="Barlow Condensed, sans-serif" font-weight="700"
+        font-size="22" fill="#EEF2FF" letter-spacing="2">PLIVOT</text>
+  <!-- Sub-texto -->
+  <text x="47" y="40" font-family="Barlow, sans-serif" font-weight="400"
+        font-size="7" fill="#4A9FD4" letter-spacing="3">DRONE TECHNOLOGY • VIDEO</text>
+</svg>

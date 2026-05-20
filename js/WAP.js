@@ -1,5 +1,5 @@
 // js para usar whatsapp 
-var NUMERO_WHATSAPP = '5573772546';
+var NUMERO_WHATSAPP = '2205946446';
 
 function abrirWhatsApp() {
     var nombre = document.getElementById('wa-nombre').value.trim();
